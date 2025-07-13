@@ -1,0 +1,243 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="inputGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bbdefb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="processGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f3e5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e1bee7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bertGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8f5e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8e6c9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="knowledgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcc02;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outputGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffebee;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcdd2;stop-opacity:1" />
+    </linearGradient>
+    
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+     refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+    
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="2" flood-color="#666" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333">
+    Medical Chatbot System Architecture
+  </text>
+  
+  <!-- User Input Layer -->
+  <rect x="50" y="70" width="140" height="70" rx="10" fill="url(#inputGrad)" stroke="#1976d2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1976d2">
+    User Input
+  </text>
+  <text x="120" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    Text Query
+  </text>
+  <text x="120" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    (via Flask API)
+  </text>
+  
+  <!-- Input Processing -->
+  <rect x="250" y="70" width="140" height="70" rx="10" fill="url(#processGrad)" stroke="#7b1fa2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7b1fa2">
+    Input Processing
+  </text>
+  <text x="320" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    • Validation</text>
+  <text x="320" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    • Sanitization</text>
+  <text x="320" y="131" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    • Medical Check</text>
+  
+  <!-- Knowledge Base Path -->
+  <rect x="50" y="200" width="340" height="120" rx="10" fill="url(#knowledgeGrad)" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f57c00">
+    Knowledge Base Processing
+  </text>
+  
+  <!-- KB Components -->
+  <rect x="70" y="240" width="100" height="60" rx="5" fill="#fff3e0" stroke="#f57c00" stroke-width="1"/>
+  <text x="120" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e65100">
+    Intent Matching
+  </text>
+  <text x="120" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    SequenceMatcher</text>
+  <text x="120" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Threshold: 0.6</text>
+  
+  <rect x="190" y="240" width="100" height="60" rx="5" fill="#fff3e0" stroke="#f57c00" stroke-width="1"/>
+  <text x="240" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e65100">
+    Keyword
+  </text>
+  <text x="240" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e65100">
+    Extraction
+  </text>
+  <text x="240" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Cancer terms</text>
+  
+  <rect x="310" y="240" width="100" height="60" rx="5" fill="#fff3e0" stroke="#f57c00" stroke-width="1"/>
+  <text x="360" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e65100">
+    JSON KB
+  </text>
+  <text x="360" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Intents &amp; Patterns</text>
+  <text x="360" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    100 categories</text>
+  
+  <!-- BERT Model Path -->
+  <rect x="450" y="200" width="340" height="120" rx="10" fill="url(#bertGrad)" stroke="#388e3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#388e3c">
+    BERT Classification Model
+  </text>
+  
+  <!-- BERT Components -->
+  <rect x="470" y="240" width="100" height="60" rx="5" fill="#e8f5e8" stroke="#388e3c" stroke-width="1"/>
+  <text x="520" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2e7d32">
+    Bio_ClinicalBERT
+  </text>
+  <text x="520" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Tokenization</text>
+  <text x="520" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Max len: 128</text>
+  <text x="520" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Embeddings</text>
+  
+  <rect x="590" y="240" width="100" height="60" rx="5" fill="#e8f5e8" stroke="#388e3c" stroke-width="1"/>
+  <text x="640" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2e7d32">
+    Classification
+  </text>
+  <text x="640" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Dropout: 0.3</text>
+  <text x="640" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Linear Layer</text>
+  <text x="640" y="299" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Focal Loss</text>
+  
+  <rect x="710" y="240" width="100" height="60" rx="5" fill="#e8f5e8" stroke="#388e3c" stroke-width="1"/>
+  <text x="760" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2e7d32">
+    Training
+  </text>
+  <text x="760" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    3-Fold CV</text>
+  <text x="760" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    AdamW Optimizer</text>
+  <text x="760" y="299" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">
+    Early Stopping</text>
+  
+  <!-- Gemini Fallback -->
+  <rect x="850" y="200" width="140" height="120" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="920" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#9c27b0">
+    Gemini API
+  </text>
+  <text x="920" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9c27b0">
+    Fallback
+  </text>
+  <text x="920" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    For unmatched</text>
+  <text x="920" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    queries</text>
+  <text x="920" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    Medical context</text>
+  <text x="920" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">
+    Cancer specialized</text>
+  
+  <!-- Decision Logic -->
+  <polygon points="500,380 550,420 500,460 450,420" fill="#fff9c4" stroke="#fbc02d" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f57f17">
+    Response
+  </text>
+  <text x="500" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f57f17">
+    Selection
+  </text>
+  
+  <!-- Output Layer -->
+  <rect x="450" y="500" width="300" height="80" rx="10" fill="url(#outputGrad)" stroke="#d32f2f" stroke-width="2" filter="url(#shadow)"/>
+  <text x="600" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d32f2f">
+    JSON Response
+  </text>
+  <text x="600" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">
+    • Response text</text>
+  <text x="600" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">
+    • Source (KB/BERT/Gemini)</text>
+  <text x="600" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">
+    • Medical flag</text>
+  
+  <!-- Flow Arrows -->
+  <!-- Main flow -->
+  <line x1="190" y1="105" x2="250" y2="105" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="320" y1="140" x2="320" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="340" y="165" font-family="Arial, sans-serif" font-size="10" fill="#666">Medical Query?</text>
+  
+  <!-- KB Path -->
+  <line x1="220" y1="320" x2="475" y2="380" stroke="#f57c00" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="300" y="350" font-family="Arial, sans-serif" font-size="10" fill="#f57c00">KB Match</text>
+  
+  <!-- BERT Path -->
+  <line x1="620" y1="320" x2="525" y2="380" stroke="#388e3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="580" y="350" font-family="Arial, sans-serif" font-size="10" fill="#388e3c">BERT Prediction</text>
+  
+  <!-- Gemini Path -->
+  <line x1="920" y1="320" x2="550" y2="400" stroke="#9c27b0" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="750" y="365" font-family="Arial, sans-serif" font-size="10" fill="#9c27b0">No Match → Gemini</text>
+  
+  <!-- Final output -->
+  <line x1="500" y1="460" x2="500" y2="500" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Branching from input processing -->
+  <line x1="320" y1="140" x2="220" y2="200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="320" y1="140" x2="620" y2="200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="390" y1="105" x2="850" y2="200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- System Components Box -->
+  <rect x="50" y="620" width="1100" height="150" rx="10" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="600" y="645" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">
+    System Components &amp; Technologies
+  </text>
+  
+  <!-- Component details in columns -->
+  <text x="80" y="670" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1976d2">Frontend/API:</text>
+  <text x="80" y="685" font-family="Arial, sans-serif" font-size="11" fill="#666">• Flask web framework</text>
+  <text x="80" y="700" font-family="Arial, sans-serif" font-size="11" fill="#666">• CORS enabled</text>
+  <text x="80" y="715" font-family="Arial, sans-serif" font-size="11" fill="#666">• Input validation</text>
+  <text x="80" y="730" font-family="Arial, sans-serif" font-size="11" fill="#666">• HTML sanitization</text>
+  <text x="80" y="745" font-family="Arial, sans-serif" font-size="11" fill="#666">• JSON responses</text>
+  
+  <text x="300" y="670" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f57c00">Knowledge Base:</text>
+  <text x="300" y="685" font-family="Arial, sans-serif" font-size="11" fill="#666">• JSON structured data</text>
+  <text x="300" y="700" font-family="Arial, sans-serif" font-size="11" fill="#666">• 100 intent categories</text>
+  <text x="300" y="715" font-family="Arial, sans-serif" font-size="11" fill="#666">• Pattern matching</text>
+  <text x="300" y="730" font-family="Arial, sans-serif" font-size="11" fill="#666">• Cancer-specific terms</text>
+  <text x="300" y="745" font-family="Arial, sans-serif" font-size="11" fill="#666">• Fallback responses</text>
+  
+  <text x="520" y="670" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#388e3c">BERT Model:</text>
+  <text x="520" y="685" font-family="Arial, sans-serif" font-size="11" fill="#666">• Bio_ClinicalBERT base</text>
+  <text x="520" y="700" font-family="Arial, sans-serif" font-size="11" fill="#666">• Custom classification head</text>
+  <text x="520" y="715" font-family="Arial, sans-serif" font-size="11" fill="#666">• Focal loss training</text>
+  <text x="520" y="730" font-family="Arial, sans-serif" font-size="11" fill="#666">• 3-fold cross validation</text>
+  <text x="520" y="745" font-family="Arial, sans-serif" font-size="11" fill="#666">• Early stopping</text>
+  
+  <text x="740" y="670" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9c27b0">Utilities:</text>
+  <text x="740" y="685" font-family="Arial, sans-serif" font-size="11" fill="#666">• SequenceMatcher similarity</text>
+  <text x="740" y="700" font-family="Arial, sans-serif" font-size="11" fill="#666">• Keyword extraction</text>
+  <text x="740" y="715" font-family="Arial, sans-serif" font-size="11" fill="#666">• Response formatting</text>
+  <text x="740" y="730" font-family="Arial, sans-serif" font-size="11" fill="#666">• Intent matching logic</text>
+  <text x="740" y="745" font-family="Arial, sans-serif" font-size="11" fill="#666">• Medical query detection</text>
+  
+  <text x="960" y="670" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#d32f2f">External:</text>
+  <text x="960" y="685" font-family="Arial, sans-serif" font-size="11" fill="#666">• Gemini API integration</text>
+  <text x="960" y="700" font-family="Arial, sans-serif" font-size="11" fill="#666">• Medical context prompts</text>
+  <text x="960" y="715" font-family="Arial, sans-serif" font-size="11" fill="#666">• Fallback responses</text>
+  <text x="960" y="730" font-family="Arial, sans-serif" font-size="11" fill="#666">• PyTorch model loading</text>
+  <text x="960" y="745" font-family="Arial, sans-serif" font-size="11" fill="#666">• Transformers library</text>
+</svg>
